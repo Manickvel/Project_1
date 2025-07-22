@@ -56,7 +56,7 @@ const DisplayUser=()=>{
                             try {
                                 await axios.delete(`http://localhost:4000/sms/delete/product/${id}`);
                                 toast.success("Deleted successfully", { position: "top-right",delay:100000 });
-                                window.location.reload()
+                                navigate("/users")
                             } catch (error) {
                                 toast.error("Failed to delete item", { position: "top-right" });
                                 console.error(error);
@@ -69,7 +69,7 @@ const DisplayUser=()=>{
                         className='btn text-black px-3 py-1 rounded'
                         id='hometoast2'
                         onClick={() => {
-                            navigate(0);
+                            navigate("/users")
                         }}
                     >
                         No
