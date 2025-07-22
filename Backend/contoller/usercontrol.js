@@ -20,7 +20,7 @@ export const getAllProductDetails = async(req,res)=>{
     try{
         const userdata = await shop.find();
         if(!userdata||userdata.length ===0){
-            res.status(400).json({alert:"no User found"})
+            return res.status(400).json({alert:"no User found"})
         }
         res.status(200).json(userdata)
     }catch(error){
